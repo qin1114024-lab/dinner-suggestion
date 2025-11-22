@@ -1,0 +1,7 @@
+{
+  "name": "Copy of GourmetGuide AI",
+  "description": "AI-powered local restaurant finder using Gemini with Google Maps Grounding. Features reviews, ratings, and reservation links.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
