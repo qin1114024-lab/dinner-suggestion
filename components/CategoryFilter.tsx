@@ -1,5 +1,5 @@
 import React from 'react';
-import { CuisineType } from '../types';
+import { CuisineType } from '../types.ts';
 
 interface CategoryFilterProps {
   selected: string;

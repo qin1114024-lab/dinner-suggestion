@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { CategoryFilter } from './components/CategoryFilter';
-import { RestaurantCard } from './components/RestaurantCard';
-import { LoadingSkeleton } from './components/LoadingSkeleton';
-import { fetchRestaurants } from './services/geminiService';
-import { GeoLocation, Restaurant, CuisineType, LoadingState } from './types';
+import { CategoryFilter } from './components/CategoryFilter.tsx';
+import { RestaurantCard } from './components/RestaurantCard.tsx';
+import { LoadingSkeleton } from './components/LoadingSkeleton.tsx';
+import { fetchRestaurants } from './services/geminiService.ts';
+import { GeoLocation, Restaurant, CuisineType, LoadingState } from './types.ts';
 
 const App: React.FC = () => {
   const [location, setLocation] = useState<GeoLocation | null>(null);

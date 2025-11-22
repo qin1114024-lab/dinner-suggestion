@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Restaurant } from '../types';
+import { Restaurant } from '../types.ts';
 
 interface RestaurantCardProps {
   data: Restaurant;

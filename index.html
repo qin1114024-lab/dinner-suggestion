@@ -7,6 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Babel Standalone for in-browser compilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -21,6 +23,15 @@
           }
         }
       }
+    </script>
+    <script>
+      // Polyfill process.env for GitHub Pages / Browser environment
+      window.process = {
+        env: {
+          // TODO: 使用者部署時，請在此填入 API Key，或使用更安全的部署方式
+          API_KEY: '' 
+        }
+      };
     </script>
     <style>
       body {
@@ -48,6 +59,7 @@
 </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    <!-- Use Babel to compile TSX on the fly -->
+    <script type="text/babel" data-type="module" data-presets="react,typescript" src="./index.tsx"></script>
   </body>
 </html>
